@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>登录</title>
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        #navbar {
+            height: 35px;
+
+        }
+
+        #navbar .navbar-brand {
+            width: 143px;
+            height: 31px;
+            margin-left: 45px;
+            margin-top: 10px;
+            background: url("img/logo.d9db9.png") no-repeat;
+        }
+
+        .navbox {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #navbar1 .navitem {
+            background-color: #f8f8f8;
+        }
+
+        .footer {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ECF0F1;
+            font-size: 14px;
+        }
+        .login{
+            width: 35%;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+        .login .btn{
+           
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--导航栏-->
+    <nav class="navbar navbar-default navbar-static-top" id="navbar" role="navigation">
+        <div class="navbox">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html" title="小说网"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1"
+                    aria-expanded="false" aria-controls="navbar1">
+                    <span class="sr-only">小说网</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse collapse in" id="navbar1" style="height: auto;">
+                <ul class="nav navbar-nav">
+                    <li class="navitem myinfo">
+                        <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 注册/登录</a></li>
+                    <li class="navitem"><a href="#"><span class="glyphicon glyphicon-book"
+                                aria-hidden="true"></span>书架</a></li>
+                    <li class="navitem"><a href="#">玄幻</a></li>
+                    <li class="navitem"><a href="#">仙侠</a></li>
+                    <li class="navitem"><a href="#">言情</a></li>
+                    <li class="navitem"><a href="#">历史</a></li>
+                    <li class="navitem"><a href="#">网游</a></li>
+                    <li class="navitem"><a href="#">恐怖</a></li>
+                    <li class="navitem"><a href="#">女生</a></li>
+                    <li class="navitem"><a href="#">更多</a></li>
+
+                </ul>
+                <!--搜索框-->
+                <form class="navbar-form navbar-right hidden-sm hidden-xs" name="articlesearch" action="#"
+                    method="post">
+                    <input type="text" class="form-control form-search" placeholder="请输入搜索关键词" name="searchkey">
+                    <input type="submit" class="form-control btn-search" value="搜索">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--主体-->
+
+    <div class="container">
+        <div class="login">
+            
+            <form action="" method="POST" role="form">
+                <legend>用户登录</legend>
+            
+                <div class="form-group">
+                    <label for="账号">账号</label>
+                    <input type="text" class="form-control" id="" placeholder="请输入账号">
+                </div>
+
+                <div class="form-group">
+                    <label for="密码">密码</label>
+                    <input type="password" class="form-control" id="" placeholder="请输入密码">
+                </div>
+                
+                <div class="lo_regist">
+                    
+                </div>
+
+                <button type="submit" class="btn btn-success btn-block">登录</button>
+            </form>
+            
+        </div>
+    </div>
+    <!--尾部-->
+    <footer class="footer">
+        <p>本站只收录已完结小说，所有小说由网友上传，如有侵犯版权，请来站内短信告知，本站立即予以处理。<br />
+            积极配合“净网2017”专项行动，共同抵制网络淫秽色情信息，一经发现，立即删除。欢迎举报！<br />
+            /侵犯版权/色情举报/邮箱:ybduco#gmail.com(#换成@)<br />
+            Copyright@2017 <a href="#" target="_blank">全本小说网</a> All Rights Reserved.<br /></p>
+    </footer>
+</body>
+
+</html>
