@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- 新 Bootstrap 核心 CSS 文件 -->
-     <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
- 
-     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <title>用户注册</title>
     <style>
-          body {
+        body {
             font-size: 14px;
         }
 
@@ -47,52 +48,50 @@
             font-size: 14px;
         }
 
-        .regist{
+        .regist {
             width: 40%;
             margin: 0 auto;
             margin-bottom: 50px;
             margin-top: 30px;
         }
-        
-        .username_box,.password_box,.que_box,.phone_box,.email_box,.yanzheng_box{
-            width: 100%;
-            margin-bottom: 5px;
-            
+
+        .username_judge,
+        .password_judge,
+        .que_judge,
+        .phone_judge,
+        .email_judge {
+            height: 35px;
+            line-height: 35px;
+            margin-left: 0;
+            text-align: left;
+            font-size: 15px;
         }
-        .username_box input,.password_box input,.que_box input,.phone_box input,.email_box input{
-            width: 95%;
-            float: left;
-           
-        }
-        .username_box .username_judge,.password_box .password_judge,.que_box .que_judge,.phone_box .phone_judge,.email_box .email_judge{
-            width: 5%;
-           height: 34px;
-           line-height: 34px;
-           
-        }
-         .username_tips,.password_tips,.que_tips,.phone_tips,.email_tips{
+
+        #username_tips,
+        #password_tips,
+        #que_tips,
+        #phone_tips,
+        #email_tips,
+        #yanzheng_tips {
             color: red;
             margin-top: 5px;
-            font-size: 14px;
+            font-size: 5px;
             float: right;
-            margin-right: 5%;
+            margin-right: 10%;
+
+
         }
-        .yanzheng_box input{
-            width: 50%;
-            float: left;
-        }
-        .yanzheng_box img{
-            width: 300px;
-            height: 35px;
-        }
-        .form-group{
-            margin-top: 15px;
+
+        .btn_submit {
+            width: 90%;
+
         }
     </style>
 </head>
+
 <body>
-      <!--导航栏-->
-      <nav class="navbar navbar-default navbar-static-top" id="navbar" role="navigation">
+    <!--导航栏-->
+    <nav class="navbar navbar-default navbar-static-top" id="navbar" role="navigation">
         <div class="navbox">
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html" title="小说网"></a>
@@ -132,77 +131,245 @@
     <!--注册部分-->
     <div class="container">
         <div class="regist">
-            
-            <form action="" method="POST" role="form" id="registFrom">
+
+            <form action="" method="POST" role="form" id="registFrom" onsubmit="return check()">
                 <legend>用户注册</legend>
-            
+
+
                 <div class="form-group">
                     <label for=""><span class="glyphicon glyphicon-user"></span>用户名</label>
-                    <div class="username_box">
-                        <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
-                        <span class="username_judge"></span>
+                    <div class="row">
+                        <div class="col-sm-11"><input type="text" class="form-control " id="username" name="username"
+                                onfocus="username_onfocus()" autocomplete="off" placeholder="请输入用户名"></div>
+                        <div class="col-sm-1"><span class="username_judge"></span></div>
                     </div>
-                    <span class="username_tips"></span>
-                    
+                    <span id="username_tips"></span>
+
                 </div>
 
                 <div class="form-group">
                     <label for=""><span class="glyphicon glyphicon-lock"></span>密码</label>
-                    <div class="password_box">
-                        <input type="text" class="form-control" id="password" name="password" placeholder="请输入密码">
-                        <span class="password_judge"></span>
+                    <div class="row">
+                        <div class="col-sm-11"><input type="password" class="form-control" id="password" name="password"
+                                autocomplete="off" placeholder="请输入密码"></div>
+                        <div class="col-sm-1"><span class="password_judge"></span></div>
                     </div>
-                    <span class="password_tips"></span>
+                    <span id="password_tips"></span>
                 </div>
 
                 <div class="form-group">
                     <label for=""><span class="glyphicon glyphicon-lock"></span>确认密码</label>
-                    <div class="que_box">
-                        <input type="text" class="form-control" id="que" name="que" placeholder="请输入密码">
-                        <span class="que_judge"></span>
+                    <div class="row">
+                        <div class="col-sm-11"><input type="password" class="form-control" id="que" name="que"
+                                autocomplete="off" placeholder="请输入密码"></div>
+                        <div class="col-sm-1"><span class="que_judge"></span></div>
                     </div>
-                    <span class="que_tips"></span>
+                    <span id="que_tips"></span>
                 </div>
 
                 <div class="form-group">
                     <label for=""><span class="glyphicon glyphicon-earphone"></span>电话号码</label>
-                    <div class="phone_box">
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="请输入电话号码">
-                        <span class="phone_judge"></span>
+                    <div class="row">
+                        <div class="col-sm-11"><input type="text" class="form-control" id="phone" name="phone"
+                                autocomplete="off" placeholder="请输入电话号码"></div>
+                        <div class="col-sm-1"><span class="phone_judge"></span></div>
                     </div>
-                   <span class="phone_tips"></span>
+                    <span id="phone_tips"></span>
                 </div>
                 <div class="form-group">
                     <label for=""><span class="glyphicon glyphicon-envelope"></span>邮箱</label>
-                    <div class="email_box">
-                        <input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱">
-                        <span class="email_judge"></span>
+                    <div class="row">
+                        <div class="col-sm-11"><input type="text" class="form-control" id="email" name="email"
+                                placeholder="请输入邮箱"></div>
+                        <div class="col-sm-1"><span class="email_judge"></span></div>
                     </div>
-                    <span class="email_tips"></span>
+                    <span id="email_tips"></span>
                 </div>
-            
+
                 <div class="form-group">
                     <label for=""><span class="glyphicon glyphicon-saved"></span>验证码</label>
-                    <div class="yanzheng_box">
-                        <input type="text" class="form-control" id="" placeholder="请输入验证码">
-                        <img src="" alt="验证码">
-                        <a href="#">看不清？换一张</a>
+                    <div class="row">
+                        <div class="col-sm-6"><input type="text" class="form-control" id="yanzheng" placeholder="请输入验证码"></div>
+                        <div class="col-sm-6"><img src="" alt="验证码">
+                            <a href="#">看不清？换一张</a></div>
                     </div>
+                    <span id="yanzheng_tips"></span>
                 </div>
-            
 
-                
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                <button type="submit" class="btn btn-success btn-block btn_submit">提交</button>
             </form>
-            
+
         </div>
     </div>
-      <!--尾部-->
-      <footer class="footer">
+    <!--尾部-->
+    <footer class="footer">
         <p>本站只收录已完结小说，所有小说由网友上传，如有侵犯版权，请来站内短信告知，本站立即予以处理。<br />
             积极配合“净网2017”专项行动，共同抵制网络淫秽色情信息，一经发现，立即删除。欢迎举报！<br />
             /侵犯版权/色情举报/邮箱:ybduco#gmail.com(#换成@)<br />
             Copyright@2017 <a href="#" target="_blank">全本小说网</a> All Rights Reserved.<br /></p>
     </footer>
 </body>
+
+<script>
+    var user_Boolean = false;   //用户名判断
+    var password_Boolean = false;  //密码判断
+    var varconfirm_Boolean = false; //确定密码判断
+    var emaile_Boolean = false;  //电子邮件判断
+    var Mobile_Boolean = false; //电话号码判断
+    var yanzheng_Boolean= false //验证码
+    function username_onfocus() {
+        document.getElementById('username_tips').innerHTML = '用户名只能是由英文字母和数字、下划线组成，以字母开头，长度为6-16位'
+    }
+
+    $('#password').focus(function () {
+        document.getElementById('password_tips').innerHTML = '密码由大小写字母、数字、下划线组成，长度为6-16位'
+    })
+
+    //用户名判断
+    $('#username').blur(function () {
+        //失去焦点后移除获得焦点的事件 适用于在input中加上onfocus属性的情况
+        $("#username").removeAttr("onfocus");
+        var text = document.getElementById('username').value
+        if (text == '') {
+            document.getElementById('username_tips').innerHTML = '用户名不能为空'
+            document.getElementsByClassName('username_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('username_judge')[0].style.color = 'red'
+        }
+        else if (text.length < 6 || text.length > 16) {
+            document.getElementById('username_tips').innerHTML = '用户名长度为4-16位'
+            document.getElementsByClassName('username_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('username_judge')[0].style.color = 'red'
+        }
+        else if (/^[a-zA-Z]\w/.test(text) == false) {
+            document.getElementById('username_tips').innerHTML = '用户名只能是由英文字母和数字、下划线组成，以字母开头'
+            document.getElementsByClassName('username_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('username_judge')[0].style.color = 'red'
+        }
+        else {
+            document.getElementById('username_tips').innerHTML = ''
+            document.getElementsByClassName('username_judge')[0].innerHTML = '✔'
+            document.getElementsByClassName('username_judge')[0].style.color = 'green'
+            user_Boolean = true
+        }
+
+
+    })
+    //密码判断
+    $('#password').blur(function () {
+        //解绑focus事件 适用于用jQuery写的focus事件
+        $('#password').unbind('focus')
+        var text = document.getElementById('password').value
+        if (text == '') {
+            document.getElementById('password_tips').innerHTML = '密码不能为空'
+            document.getElementsByClassName('password_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('password_judge')[0].style.color = 'red'
+        }
+        else if (/^[a-zA-Z0-9_]\w/.test(text) == false) {
+            document.getElementById('password_tips').innerHTML = '密码由大小写字母、数字、下划线组成'
+            document.getElementsByClassName('password_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('password_judge')[0].style.color = 'red'
+        }
+
+        else if (text.length < 6 || text.length > 16) {
+            document.getElementById('password_tips').innerHTML = '用户名长度为6-16位'
+            document.getElementsByClassName('password_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('password_judge')[0].style.color = 'red'
+        }
+        else {
+            document.getElementById('password_tips').innerHTML = ''
+            document.getElementsByClassName('password_judge')[0].innerHTML = '✔'
+            document.getElementsByClassName('password_judge')[0].style.color = 'green'
+            password_Boolean = true
+        }
+    })
+    //确认密码
+    $('#que').blur(function () {
+        var text = document.getElementById('que').value
+        if (text == '') {
+            document.getElementById('que_tips').innerHTML = '请再次输入密码'
+            document.getElementsByClassName('que_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('que_judge')[0].style.color = 'red'
+        }
+        else if (text != document.getElementById('password').value) {
+            document.getElementById('que_tips').innerHTML = '两次输入密码不一致'
+            document.getElementsByClassName('que_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('que_judge')[0].style.color = 'red'
+        }
+        else {
+            document.getElementById('que_tips').innerHTML = ''
+            document.getElementsByClassName('que_judge')[0].innerHTML = '✔'
+            document.getElementsByClassName('que_judge')[0].style.color = 'green'
+            varconfirm_Boolean = true
+        }
+    })
+
+    //电话号码
+    $('#phone').blur(function () {
+        var text = document.getElementById('phone').value
+        if (text == '') {
+            document.getElementById('phone_tips').innerHTML = '电话号码不能为空'
+            document.getElementsByClassName('phone_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('phone_judge')[0].style.color = 'red'
+        }
+        else if (/^1[3456789]\d{9}$/.test(text) == false) {
+            document.getElementById('phone_tips').innerHTML = '请输入正确的电话号码'
+            document.getElementsByClassName('phone_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('phone_judge')[0].style.color = 'red'
+        }
+        else {
+            document.getElementById('phone_tips').innerHTML = ''
+            document.getElementsByClassName('phone_judge')[0].innerHTML = '✔'
+            document.getElementsByClassName('phone_judge')[0].style.color = 'green'
+            Mobile_Boolean = true
+        }
+    })
+
+    //邮件
+    $('#email').blur(function () {
+        var text = document.getElementById('email').value
+        if (text == '') {
+            document.getElementById('email_tips').innerHTML = '电子邮件不能为空'
+            document.getElementsByClassName('email_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('email_judge')[0].style.color = 'red'
+        }
+        else if (/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(text) == false) {
+            document.getElementById('email_tips').innerHTML = '请输入正确的电子邮件'
+            document.getElementsByClassName('email_judge')[0].innerHTML = '✘'
+            document.getElementsByClassName('email_judge')[0].style.color = 'red'
+        }
+        else {
+            document.getElementById('email_tips').innerHTML = ''
+            document.getElementsByClassName('email_judge')[0].innerHTML = '✔'
+            document.getElementsByClassName('email_judge')[0].style.color = 'green'
+            emaile_Boolean = true
+        }
+    })
+        //验证码
+        $('#yanzheng').blur(function(){
+            var text = document.getElementById('yanzheng').value
+            if(text==''){
+                document.getElementById('yanzheng_tips').innerHTML = '验证码不能为空' 
+            }
+            else{
+                document.getElementById('yanzheng_tips').innerHTML = '' 
+                yanzheng_Boolean=true
+            }
+        })
+    function check() {
+        if (user_Boolean == true &&
+            password_Boolean == true &&
+            varconfirm_Boolean == true &&
+            emaile_Boolean == true &&
+            Mobile_Boolean == true&&yanzheng_Boolean==true) {
+                console.log('可以提交')
+                return true
+             }else{
+                 console.log('不能提交')
+                 return false
+             }
+    }
+</script>
+
 </html>
