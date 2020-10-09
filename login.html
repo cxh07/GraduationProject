@@ -128,8 +128,8 @@
                 <legend>用户登录</legend>
 
                 <div class="form-group">
-                    <label for="账号">账号</label>
-                    <input type="text" class="form-control" id="user_id" placeholder="请输入账号" onblur="judge_user()">
+                    <label for="账号">用户名</label>
+                    <input type="text" class="form-control" id="user_id" placeholder="请输入用户名" onblur="judge_user()">
                     <span id="user_tips"></span>
                 </div>
 
@@ -170,13 +170,13 @@
 
         var text = document.getElementById('user_id').value;
         if (text == "") {
-            document.getElementById('user_tips').innerHTML = '账号不能为空'
+            document.getElementById('user_tips').innerHTML = '用户名不能为空'
         }
         else if (text.length < 6 || text.length > 16) {
-            document.getElementById('user_tips').innerHTML = '账号长度为6-16位'
+            document.getElementById('user_tips').innerHTML = '用户名长度为6-16位'
         }
         else if (/^[a-zA-Z]\w/.test(text) == false) {
-            document.getElementById('user_tips').innerHTML = '账号只能是由英文字母和数字组成，以字母开头'
+            document.getElementById('user_tips').innerHTML = '用户名只能是由英文字母和数字下划线组成，以字母开头'
         }
         else {
             document.getElementById('user_tips').innerHTML = ''
@@ -204,7 +204,9 @@
         }
     }
 </script>
-
+<script>
+    
+</script>
 
 
 </html>
