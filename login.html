@@ -205,6 +205,7 @@
             if (document.getElementById('remember').checked == true) {
                 var user = document.getElementById('user_id').value;
                 var password = document.getElementById('user_password').value;
+                password=window.btoa(password)  //加密
                setCookie('user',user,7)
                setCookie('key',password,7)
                 console.log(document.cookie)
@@ -227,7 +228,7 @@
         //读取cookie
         if (getCookie('user') && getCookie('key')) {
             user.value = getCookie('user');
-            password.value = getCookie('key');
+            password.value = window.atob(getCookie('key'));
             
             re.checked = true;
         }
