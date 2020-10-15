@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>阅读</title>
+    <style>
+        body {
+            font-size: 14px;
+        }
+
+        #navbar {
+            height: 35px;
+
+        }
+
+        #navbar .navbar-brand {
+            width: 143px;
+            height: 31px;
+            margin-left: 45px;
+            margin-top: 10px;
+            background: url("img/logo.d9db9.png") no-repeat;
+        }
+
+        .navbox {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        #navbar1 .navitem {
+            background-color: #f8f8f8;
+        }
+
+        .pager_nav {
+            background-color: #337ab7;
+        }
+
+        .pager_nav ul li a {
+            display: inline-block;
+            padding: 5px 14px;
+            background-color: #1ABC9C;
+            border: none;
+            border-radius: 15px;
+        }
+
+        .pager_nav ul li a:hover {
+            background-color: aquamarine;
+            color: #000;
+        }
+
+        .content-ext{
+            line-height: 40px;
+            font-size: 22px;
+            padding: 20px;
+            word-break: break-all;
+            user-select:none
+        }
+
+        .footer {
+
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ECF0F1;
+            font-size: 14px;
+        }
+        .page_ul li {
+            width: 33%;
+            float: left;
+            list-style: none;
+            position: relative;
+            display: block;
+            padding: 10px;
+            margin-bottom: -1px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+        }
+        
+    </style>
+</head>
+
+<script>
+    /*双击滚动*/
+    var s;
+    function double(){
+       
+        s=window.setInterval(gundong,100)
+       
+    };
+    function gundong(){
+        window.scrollBy(0,3)
+    }
+    
+    
+   
+</script>
+
+
+
+<body onDblClick="double()" onMousedown="clearInterval(s)"> 
+    
+    <nav class="navbar navbar-default navbar-static-top" id="navbar" role="navigation">
+        <div class="navbox">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html" title="小说网"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1"
+                    aria-expanded="false" aria-controls="navbar1">
+                    <span class="sr-only">小说网</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse collapse in" id="navbar1" style="height: auto;">
+                <ul class="nav navbar-nav">
+                    <li class="navitem myinfo">
+                        <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 注册/登录</a></li>
+                    <li class="navitem"><a href="#"><span class="glyphicon glyphicon-book"
+                                aria-hidden="true"></span>书架</a></li>
+                    <li class="navitem"><a href="#">玄幻</a></li>
+                    <li class="navitem"><a href="#">仙侠</a></li>
+                    <li class="navitem"><a href="#">言情</a></li>
+                    <li class="navitem"><a href="#">历史</a></li>
+                    <li class="navitem"><a href="#">网游</a></li>
+                    <li class="navitem"><a href="#">恐怖</a></li>
+                    <li class="navitem"><a href="#">女生</a></li>
+                    <li class="navitem"><a href="#">更多</a></li>
+
+                </ul>
+                <!--搜索框-->
+                <form class="navbar-form navbar-right hidden-sm hidden-xs" name="articlesearch" action="#"
+                    method="post">
+                    <input type="text" class="form-control form-search" placeholder="请输入搜索关键词" name="searchkey">
+                    <input type="submit" class="form-control btn-search" value="搜索">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class=" col-sm-12">
+
+                <ol class="breadcrumb">
+                    <li>
+                        <a href="#">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">斗罗大陆</a>
+                    </li>
+                    <li class="active">第一章 斗罗大陆，异界唐三（一）</li>
+                </ol>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="pager_nav">
+                    <ul class="pager">
+                        <li class="previous"><a class="btn btn-info" href="#">上一篇</a></li>
+                        <li><a class="btn btn-info" href="/0/176/">返回目录</a></li>
+                        <li class="next"><a class="btn btn-info" href="#">下一篇</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <!--小说内容-->
+        
+        <div class="row">
+            
+       
+        
+        <div class="col-sm-12 ">
+            <div id="gundong" class="alert alert-warning" style="font-size: 12px">
+                亲,双击屏幕即可自动滚动
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">第一章 斗罗大陆，异界唐三（一）</div>
+                
+                <div class="panel-body content-body content-ext">
+                    一本读|ＷｗんＷ．『yb→du→．co<br>&nbsp;&nbsp;&nbsp;&nbsp;斗罗大陆，天斗帝国西南，法斯诺行省。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;圣魂村，如果只是听其名，那么，这绝对是个相当令人惊讶的名字，可实际上，这只不过是法斯诺行省诺丁城南一个只有三百余户的小村而已。之所以名为圣魂，是因为传说中，在百年前这里曾经走出过一位魂圣级别的魂师，从而得名。这也是圣魂村永远的骄傲。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;圣魂村外，尽是大片的农耕之地，这里出产的粮食和蔬菜，都要供给到诺丁城，诺丁城在法斯诺行省中虽然算不得大城市，但这里毕竟距离与另一帝国接壤处很近，也自然是两大帝国商人交易的起始地之一，诺丁城因此而繁荣，附带的，令城市周围这些村庄中的平民生活也比其他地方要好的多。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;天刚蒙蒙亮，远处东方升起一抹淡淡的鱼肚白色，毗邻圣魂村的一座只有百余米高的小山包上，却已经多了一道瘦小的身影。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;那是个只有五、六岁的孩子，显然，他经常承受太阳的温暖，皮肤呈现出健康的小麦色，黑色短发看上去很利落，一身衣服虽然朴素，到也干净。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;对于他这么大的孩子来说，攀爬这百米高的山丘可并不是什么容易的事，但奇怪的是，当他来到山顶的制高点时却面不红、气不喘，一副怡然自得的样子。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;男孩儿在山顶上坐了下来，他的双眼死死的盯视着东方那抹渐渐明亮的鱼肚白色，鼻间缓缓吸气，再从口中徐徐吐出，吸气绵绵、呼气微微，竟是形成了一个美妙的循环。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;正在这时，他的眼睛突然瞪大了，远处天边那抹渐渐明亮的鱼肚白色中，仿佛闪过一丝淡淡的紫气，如果不是有着惊人的目力和足够专注的话，是绝对无法发现它存在的。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;紫气的出现，令男孩儿的精神完全集中起来，他甚至不再呼气，只是轻微而徐缓的吸气，同时双眼紧紧的盯视着那抹倏隐倏现的紫色。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;紫气出现的时间并不长，当东方那一抹鱼肚白逐渐被升起的朝阳之色覆盖时，紫气已经完全消失了。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;男孩儿这才缓缓闭上双眼，同时长长的呼出一口体内的浊气。一道白色气流如同匹练般从他口中吐出，然后再徐徐散去。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;静坐半晌，男孩儿才再次睁眼，不知是否因为那天边紫气的沾染，他眼眸中竟然闪烁着一层淡淡的紫意，尽管这紫色并没有持续太长时间就悄然收敛，但当它存在的时候，却是那么清晰。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;颓然一叹，男孩儿做出一个绝不应该出现在他这个年龄的无奈表情，摇了摇头，自言自语的道：“还是不行，我的玄天功依旧无法冲破第一重的瓶颈。这已经整整三个月了，究竟是为什么？哪怕是需要依靠紫气东来只能清晨修炼的紫极魔瞳一直都在进步。玄天功不能突破瓶颈，我的玄玉手也无法再做提升。当初我修炼的时候，在第一重到第二重之间，似乎并没有遇到这样的情况。玄天功一共九重，怎么这第一重就如此麻烦？难道，是因为这个世界与我那原本的世界不同么？”<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;来到这个世界已经五年多的时间了，眼前的这个孩子，正是当初在唐门跳崖明志的唐三。当他从昏迷中清醒过来的时候，发现除了温暖的感觉什么也做不了。但意料中的死亡并没有来临，很快，他就通过一个挤压的过程来到了这个世界。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;直到很长时间之后，唐三才明白了这是怎么回事。自己没有死，但也已经不再是以前那个唐三。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;出生之后，唐三用了接近一年的时间，才学会了这个世界的语言。他还记得，在自己出生的时候，虽然还无法睁眼观看，但却听到一个浑厚的男音在撕心裂肺般的哭喊着。当他学会了这个世界的语言，凭借着过人的记忆回忆时，也只能记起，那个男人似乎在喊，三妹，不要抛下我，而那个男人，就是他的父亲唐昊。他在这个世界的母亲，那时候就已经死于难产之中。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;不知道是冥冥中自有天意，还是因缘巧合，为了纪念死去的妻子，唐昊给他取的名字竟然神奇还是叫唐三。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;村里同龄的孩子经常会以此来取笑他，可唐三心中却十分满意。这毕竟是他在另一个世界使用了近三十年的名字。单是熟悉就已经令他早就喜欢上了这两个字。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;来到这个世界，经过开始的吃惊、恐惧，到后来的兴奋以及现在的平静，唐三已经完全接受了现实，在他看来，这是上天又给了他一次机会。前世最大的心愿，或许能够在这一世来实现吧。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;赤裸的来到这个世界，但唐三却有着最大的财富，那就是记忆。身为唐门外门最出色的天才，唐门各种机括类暗器的制造方法全部烙印在他脑海之中。而当初他偷去了唐门内门的秘籍之后，多年渴望得尝，在学习的过程中，内门最高的玄天宝录也同样被他记熟于心。唐三希望，能够在这个世界再现唐门的辉煌。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;“该回去了。”唐三看看天色，瘦小的身体腾身而起，朝着山下跑去。如果这时候有人看到他，一定会惊讶的瞪大了眼睛，他每一步跨出，竟然都能有接近一丈，山间坑洼不平的地面对他来说根本没有任何影响，轻松的避让开，急速行进之间，比成人还要快上许多。<br>
+                    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;唐门的精髓是什么？暗器、毒药和轻功。唐门内门与外门最大的区别，就是暗器的使用方法。外门以机括类为主，而内门，则是真正的手法。毒药一般是外门才用，内门嫡传弟子的暗器是很少用毒的，因为他们根本就不需要。
+                </div>
+               
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <nav class="pager_nav">
+                    <ul class="pager">
+                        <li class="previous"><a class="btn btn-info" href="#">上一篇</a></li>
+                        <li><a class="btn btn-info"id='pager_a' href="javascript:;">返回目录</a></li>
+                        <li class="next"><a class="btn btn-info" href="#">下一篇</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+    
+    
+    
+    
+    
+
+
+
+    <!--尾部-->
+    <footer class="footer" id="footer">
+        <p>本站只收录已完结小说，所有小说由网友上传，如有侵犯版权，请来站内短信告知，本站立即予以处理。<br />
+            积极配合“净网2017”专项行动，共同抵制网络淫秽色情信息，一经发现，立即删除。欢迎举报！<br />
+            /侵犯版权/色情举报/邮箱:ybduco#gmail.com(#换成@)<br />
+            Copyright@2017 <a href="#" target="_blank">全本小说网</a> All Rights Reserved.<br /></p>
+    </footer>
+</body>
+
+</html>
